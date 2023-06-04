@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const burgerMenu = document.querySelector('.menu');
 const shopMenu = document.querySelector('.navbar-shopping-cart');
 const mobileMenu = document.querySelector('.mobile-menu');
-const order = document.querySelector('.product-detail');
+const shopOrder = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
@@ -11,19 +11,19 @@ burgerMenu.addEventListener('click', toggleMobileMenu);
 shopMenu.addEventListener('click', toggleShopOrder);
 
 function toggleDesktopMenu() {
-   order.classList.add('inactive');
+   shopOrder.classList.add('inactive');
    desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu() {
-   order.classList.add('inactive');
+   shopOrder.classList.add('inactive');
    mobileMenu.classList.toggle('inactive');
 }
 
 function toggleShopOrder  () {
    mobileMenu.classList.add('inactive');
    desktopMenu.classList.add('inactive');
-   order.classList.toggle('inactive');
+   shopOrder.classList.toggle('inactive');
 }
 
 const productList = [];
@@ -39,7 +39,7 @@ productList.push({
 });
 productList.push({
    name:'Computadora',
-   price: 200,
+   price: 600,
    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
 
